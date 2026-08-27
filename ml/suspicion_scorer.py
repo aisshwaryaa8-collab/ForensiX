@@ -50,15 +50,19 @@ def score_artifacts(artifacts: list[dict]) -> list[dict]:
     ml_scores = compute_anomaly_scores(feature_matrix)
 
     scored = []
-    for artifact, ml_score in zip(artifacts, ml_scores):
+    for i, (artifact, ml_score) in enumerate(zip(artifacts, ml_scores)):
         rule_result = apply_rule_checks(artifact)
         rule_score = rule_result["rule_score"]
 
         suspicion_score = round(RULE_WEIGHT * rule_score + ML_WEIGHT * ml_score)
 
+        # .get() with fallbacks: real parser output may not always include
+        # these fields under the exact names we expect on day one of
+        # integration — falling back to an index-based id beats crashing
+        # the whole batch over one malformed record.
         scored.append({
-            "artifact_id": artifact["artifact_id"],
-            "path": artifact["path"],
+            "artifact_id": artifact.get("artifact_id", f"unknown-{i}"),
+            "path": artifact.get("path", "unknown path"),
             "rule_score": rule_score,
             "ml_score": round(ml_score),
             "suspicion_score": suspicion_score,
