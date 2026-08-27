@@ -24,19 +24,18 @@ Investigators need a tool that streamlines the process of importing evidence, ru
 ## Getting Started
 
 ### Backend
-\`\`\`
-bash
+```
 cd backend
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn main:app --reload
-\`\`\`
+```
 
 ### Frontend
-\`\`\`
-bash
+
+```bash
 cd frontend
 npm install
 npm start
-\`\`\`
+```
