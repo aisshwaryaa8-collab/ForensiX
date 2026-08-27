@@ -1,0 +1,6 @@
+filepath,size_bytes,modified,sha256
+C:\Users\jsmith\Documents\report_q3.docx,45210,2026-08-19 14:02:00,3a7bd3e2360a3d29eea436fcfb7e44c735d117c42d1c1835420b6b9942dd4f1b
+C:\Users\jsmith\Downloads\invoice_2837.pdf,120044,2026-08-19 16:30:00,c0e0ec2c1122334455667788990011223344556677889900112233445566778
+C:\Users\jsmith\AppData\Local\Temp\svch0st.exe,893120,2026-08-21 02:18:40,44d88612fea8a8f36de82e1278abb02f5c0aa8c5b6f4c1c8b3d3f5e2b4a1c9d7
+C:\Windows\System32\drivers\etc\hosts,824,2026-08-21 02:19:00,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+C:\Users\jsmith\Desktop\passwords_backup.txt,512,2026-08-21 02:21:10,9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08
